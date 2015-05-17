@@ -23,7 +23,7 @@ class DotFile(object):
                 for line in f:
                     cmd, args = self.parse(line)
                     if cmd:
-                        print('[DotFile] running: {0} {1}'.format(cmd, args))
+                        _logger().info('[DotFile] running: {0} {1}'.format(cmd, args))
                         sublime.active_window().run_command(cmd, args)
         except FileNotFoundError:
             pass
