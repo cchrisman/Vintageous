@@ -893,7 +893,7 @@ class PressKey(ViWindowCommandBase):
                 # remove counts
                 action_seq = to_bare_command_name(state.sequence)
                 _logger().info('[PressKey] action seq: {0}'.format(action_seq))
-                command = key_mappings.resolve(sequence=action_seq, mode=modes.NORMAL)
+                #command = key_mappings.resolve(sequence=action_seq, mode=modes.NORMAL)
                 # TODO: Make _missing a command.
                 if isinstance(command, cmd_base.ViMissingCommandDef):
                     _logger().info("[PressKey] unmapped sequence: {0}".format(state.sequence))
